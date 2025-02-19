@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A professional landing page for showcasing a product">
+    <title>Innovate the Future with Our Product</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #37adfc;
+            color: #2c3e50;
+        }
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .language-selector {
+            margin-right: 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #f1c40f;
+        }
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            color: white;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #f1c40f;
+            color: #2c3e50;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            transition: background 0.3s;
+        }
+        .cta-button:hover {
+            background: #e67e22;
+        }
+        .features, .pricing, .contact {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            margin: 20px auto;
+            width: 85%;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .feature-list {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .feature {
+            background: #1e3c72;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1;
+            max-width: 250px;
+        }
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #2a5298;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🔹 <span data-lang="title">Future Product</span></div>
+            <ul>
+                <li><a href="#features" data-lang="why">Why Us?</a></li>
+                <li><a href="#pricing" data-lang="plans">Plans & Pricing</a></li>
+                <li><a href="#contact" data-lang="contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        <select class="language-selector" onchange="changeLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="ar">العربية</option>
+        </select>
+    </header>
+    
+    <section class="hero">
+        <h1 data-lang="hero-title">Smart Solutions for a More Innovative World</h1>
+        <p data-lang="hero-text">Experience exceptional performance and intelligent design that meets your needs.</p>
+        <a href="#pricing" class="cta-button" data-lang="cta">Start Your Journey Now</a>
+    </section>
+    
+    <section id="features" class="features">
+        <h2 data-lang="why">Why Choose Us?</h2>
+        <div class="feature-list">
+            <div class="feature" data-lang="feature1">🔹 Seamless User Experience</div>
+            <div class="feature" data-lang="feature2">⚡ Unmatched Efficiency & Speed</div>
+            <div class="feature" data-lang="feature3">💡 24/7 Customer Support</div>
+        </div>
+    </section>
+    
+    <section id="pricing" class="pricing">
+        <h2 data-lang="plans">Plans & Pricing</h2>
+        <div class="pricing-plans">
+            <div class="plan" data-lang="plan1">📌 Basic Plan - Perfect for Beginners</div>
+            <div class="plan" data-lang="plan2">🚀 Professional Plan - Advanced Performance</div>
+            <div class="plan" data-lang="plan3">💎 Premium Plan - Ultimate Quality</div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact">
+        <h2 data-lang="contact">Have a Question?</h2>
+        <p data-lang="contact-text">We're here to help! Don't hesitate to reach out.</p>
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <textarea placeholder="Write your message here" required></textarea>
+            <button type="submit" data-lang="send">Send Message</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 <span data-lang="footer">All Rights Reserved | Future Product</span></p>
+    </footer>
+    
+    <script>
+        const translations = {
+            en: {
+                title: "Future Product",
+                why: "Why Us?",
+                plans: "Plans & Pricing",
+                contact: "Contact Us",
+                hero-title: "Smart Solutions for a More Innovative World",
+                hero-text: "Experience exceptional performance and intelligent design that meets your needs.",
+                cta: "Start Your Journey Now",
+                feature1: "🔹 Seamless User Experience",
+                feature2: "⚡ Unmatched Efficiency & Speed",
+                feature3: "💡 24/7 Customer Support",
+                plan1: "📌 Basic Plan - Perfect for Beginners",
+                plan2: "🚀 Professional Plan - Advanced Performance",
+                plan3: "💎 Premium Plan - Ultimate Quality",
+                contact-text: "We're here to help! Don't hesitate to reach out.",
+                send: "Send Message",
+                footer: "All Rights Reserved | Future Product"
+            },
+            fr: {
+                title: "Produit du Futur",
+                why: "Pourquoi nous?",
+                plans: "Plans et Tarification",
+                contact: "Contactez-nous",
+                hero-title: "Solutions intelligentes pour un monde plus innovant",
+                hero-text: "Profitez d'une performance exceptionnelle et d'un design intelligent qui répond à vos besoins.",
+                cta: "Commencez votre voyage maintenant",
+                feature1: "🔹 Expérience utilisateur fluide",
+                feature2: "⚡ Efficacité et rapidité inégalées",
+                feature3: "💡 Support client 24/7",
+                plan1: "📌 Plan Basique - Parfait pour les débutants",
+                plan2: "🚀 Plan Professionnel - Performance avancée",
+                plan3: "💎 Plan Premium - Qualité ultime",
+                contact-text: "Nous sommes ici pour vous aider! N'hésitez pas à nous contacter.",
+                send: "Envoyer le message",
+                footer: "Tous droits réservés | Produit du Futur"
+            }
+        };
+
+        function changeLanguage(lang) {
+            document.querySelectorAll('[data-lang]').forEach(element => {
+                element.innerText = translations[lang][element.getAttribute('data-lang')];
+            });
+        }
+    </script>
+</body>
+</html>
